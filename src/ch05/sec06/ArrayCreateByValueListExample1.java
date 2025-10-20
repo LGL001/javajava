@@ -1,27 +1,31 @@
 package ch05.sec06;
 
-public class ArrayCreateByValueListExample2 {
+public class ArrayCreateByValueListExample1 {
     public static void main(String[] args) {
-        //배열 변수 선언
-        int[] scores;
-        //배열 변수에 배열을 대입
-        scores = new int[] { 83, 90, 87 };
-        //배열 항목의 총합을 구하고 출력
-        int sum1 = 0;
-        for(int i=0; i<3; i++) {
-            sum1 += scores[i];
-        }
-        System.out.println("총합 : " + sum1);
+        //배열 변수 선언과 배열 생성
+        String[] season = { "Spring", "Summer", "Fall", "Winter" };
 
-        //배열을 매개값으로 주고, printItem 메소드 호출
-        printItem( new int[] { 83, 90, 87 } );
-    }
+        //배열의 항목값 읽기
+        System.out.println("season[0] : " + season[0]);
+        System.out.println("season[1] : " + season[1]);
+        System.out.println("season[2] : " + season[2]);
+        System.out.println("season[3] : " + season[3]);
 
-    //printItem 메소드 선언
-    public static void printItem( int[] scores ) {
-        //매개변수가 참조하는 배열의 항목을 출력
+        //인덱스 1번 항목의 값 변경
+        season[1] = "여름";
+        System.out.println("season[1] : " + season[1]);
+        System.out.println();
+
+        //배열 변수 선언과 배열 생성
+        int[] scores = { 83, 90, 87 };
+
+        //총합과 평균 구하기
+        int sum = 0;
         for(int i=0; i<3; i++) {
-            System.out.println("score[" + i + "]: " + scores[i]);
+            sum += scores[i];
         }
+        System.out.println("총합 : " + sum);
+        double avg = (double) sum / 3;
+        System.out.println("평균 : " + avg);
     }
 }

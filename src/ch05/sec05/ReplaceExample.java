@@ -1,13 +1,11 @@
 package ch05.sec05;
 
-public class SubStringExample {
+public class ReplaceExample {
     public static void main(String[] args) {
-        String ssn = "880815-1234567";
+        String oldStr = "자바 문자열은 불변입니다. 자바 문자열은 String입니다.";
+        String newStr = oldStr.replace("자바", "JAVA");
 
-        String firstNum = ssn.substring(0, 6);
-        System.out.println(firstNum);
-
-        String secondNum = ssn.substring(7);
-        System.out.println(secondNum);
+        System.out.println(oldStr);
+        System.out.println(newStr);
     }
 }
